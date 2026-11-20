@@ -1,7 +1,14 @@
-import { PgTable, serial, text, boolean, pgTable } from "drizzle-orm/pg-core";
+import { serial, text, boolean, pgTable, integer } from "drizzle-orm/pg-core";
 
 export const notes = pgTable("notes", {
     id: serial("id").primaryKey(),
     content: text("content").notNull(),
-    important: boolean("important").notNull().default(false)
+    important: boolean("important").notNull().default(false),
+    userId: integer("user_id").notNull().references(() => users.id)
+})
+
+export const users = pgTable("users", {
+  id: serial("id").primaryKey(),
+  username: text("username").notNull().unique(),
+  name: text("name").notNull(),
 })

@@ -8,6 +8,20 @@
       "when": 1794637024380,
       "tag": "0000_freezing_banshee",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795117449994,
+      "tag": "0001_clumsy_raider",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795153525640,
+      "tag": "0002_big_wrecking_crew",
+      "breakpoints": true
     }
   ]
 }
